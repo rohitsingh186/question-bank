@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+}
+
+.border {
+    border-style: ridge;
+    border-width: medium;
+}
+
+.sidebars {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.height-full {
+    height: 100%;
+}
+
+/* Grid */
+.grid {
+    padding: 15px;
+}
+
+.grid-height {
+    height: 16.666666%;
+}
+
+.grid-top {
+    height: 10%;
+}
+
+.grid-main {
+    height: 90%;
+}
+
+/* Custom cols */
+.grid-col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: rgba(86,61,124,.15);
+}
+
+.grid-col {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 14.285714%;
+}

@@ -1,0 +1,54 @@
+<div class="container-fluid height-full" xmlns:background-color="http://www.w3.org/1999/xhtml">
+    <div class="row border sidebars height-full">
+        <div class="col-md-3 border height-full nav-side-menu" style="background-color: #2e353d; color: #e1ffff; padding-top: 15px; padding-bottom: 15px">
+            <div class="menu-list">
+                <ul id="menu-content">
+                    <li class="row" style="display: flex">
+                        <div class="col-6" style="width: 100%">Player:</div>
+                        <div class="col-6" style="text-align: right; width: 100%; margin: 5px" [style.background-color]="currentPlayer"></div>
+                    </li>
+                    <li class="row" style="display: flex">
+                        <div class="col-6" style="width: 100%">Winner:</div>
+                        <div *ngIf="gameOver" class="col-6" style="text-align: right; width: 100%; margin: 5px" [style.background-color]="currentPlayer"></div>
+                        <div *ngIf="!gameOver" class="col-6" style="text-align: right; width: 100%; margin: 5px; background-color: white"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid col-md-9 border height-full grid">
+            <div class="container-fluid grid-top border">
+                <div class="row border sidebars height-full">
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-1">1</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-2">2</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-3">3</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-4">4</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-5">5</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-6">6</div>
+                    <div (click)="play($event)" class="grid-col border height-full btn btn-default btn-sm" style="font-size: 12px; width: 100%; text-align: center; border-radius: 5px" id="grid-col-7">7</div>
+                </div>
+            </div>
+
+            <div class="container-fluid grid-main border">
+                <div class="row border sidebars grid-height" *ngFor="let rowNum of rows">
+                    <div class="container-fluid grid-col border height-full" *ngFor="let colNum of cols" [style.background-color]="gridValues[rowNum][colNum].color" style="border-radius: 5px">
+                        <!-- <div class="row sidebars" style="height: 33.333333%">
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: left">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[7]}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: center">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[0]}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: right">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[1]}}</p>
+                        </div>
+                        <div class="row sidebars" style="height: 33.333333%">
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: left">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[6]}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: center">{{gridValues[rowNum][colNum].color}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: right">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[2]}}</p>
+                        </div>
+                        <div class="row sidebars" style="height: 33.333333%">
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: left">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[5]}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: center">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[4]}}</p>
+                            <p class="col-4" style="font-size: 12px; width: 100%; text-align: right">{{gridValues[rowNum][colNum].friendlyNeighboursCounts[3]}}</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

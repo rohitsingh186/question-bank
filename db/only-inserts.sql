@@ -1,0 +1,5 @@
+INSERT INTO `qb_level` VALUES ('5ccdc296-f6ed-44d8-98a4-853c406a2b6b','2018-08-04 16:29:24','Easy');
+INSERT INTO `qb_option` VALUES ('2f876f69-d75c-4d05-ad25-412674d7dbb0','2018-08-04 16:34:23','','2018-08-04 16:34:23','No','79d13a61-7e64-4d2a-a65d-08d86becdb09'),('7c5da41e-29f2-4784-b884-bea202d26a8a','2018-08-04 16:34:23','\0','2018-08-04 16:34:23','Yes','79d13a61-7e64-4d2a-a65d-08d86becdb09');
+INSERT INTO `qb_question` VALUES ('79d13a61-7e64-4d2a-a65d-08d86becdb09','2018-08-04 16:34:23','2018-08-04 16:34:23','Is Map a part of collections framework ?','5ccdc296-f6ed-44d8-98a4-853c406a2b6b','1272f321-ebe4-461c-8d80-98fada7b1271','423d5d55-4148-4523-a00b-296574e16ec6');
+INSERT INTO `qb_topic` VALUES ('1272f321-ebe4-461c-8d80-98fada7b1271','2018-08-04 16:29:59','Collections Framework');
+INSERT INTO `qb_user` VALUES ('423d5d55-4148-4523-a00b-296574e16ec6','Rohit Kumar Singh','rkumarsingh');

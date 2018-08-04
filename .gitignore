@@ -1,0 +1,10 @@
+**.iml
+**.log
+**.class
+
+/**/.idea/
+/**/target/
+
+**/app/*.js
+**/app/*.map
+**/node_modules/
